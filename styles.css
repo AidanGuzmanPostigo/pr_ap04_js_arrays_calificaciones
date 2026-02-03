@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+  display: flex;
+  justify-content: center;
+  padding: 40px 12px;
+}
+
+.contenedor {
+  background-color: white;
+  width: 520px;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.entrada,
+.acciones {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.entrada input {
+  width: 140px;
+  padding: 6px;
+}
+
+button {
+  padding: 8px 10px;
+  cursor: pointer;
+}
+
+ul {
+  padding-left: 18px;
+}
+
+.mensaje {
+  margin-top: 10px;
+  min-height: 20px;
+  color: #b00020;
+}
