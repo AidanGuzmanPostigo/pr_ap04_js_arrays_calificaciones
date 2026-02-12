@@ -15,7 +15,7 @@
  * Array principal donde se almacenan todas las notas introducidas.
  * @type {number[]}
  */
-let notas = []; // TODO: este array será el que uses en toda la práctica
+let notas = JSON.parse(localStorage.getItem("notas")) || []; // TODO: este array será el que uses en toda la práctica
 
 
 /* ==========================================================
@@ -79,6 +79,7 @@ const error = document.querySelector("#mensaje");
  * @returns {void}
  */
 function init() {
+render();
   nota.addEventListener("keydown", (event) => {
     if(event.key == "Enter"){
         agregarNota();
@@ -148,6 +149,7 @@ function ordenarDesc() {
  */
 function limpiarTodo() {
     notas = [];
+    localStorage.clear();
     render();
 }
 
@@ -165,6 +167,7 @@ function limpiarTodo() {
 function render() {
   pintarLista();
   pintarResumen();
+  localStorage.setItem("notas", JSON.stringify(notas));
 }
 
 /**
